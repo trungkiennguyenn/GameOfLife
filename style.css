@@ -37,7 +37,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked {
-    background-color: rgb(16, 165, 141);
+    background-color: #ce7609;
     transition: background-color 0.3s ease;
 }
 
@@ -48,7 +48,7 @@ input[type="checkbox"]:not(:checked) {
 
 /* Button styling */
 button {
-    background-color: #ff8c00;
+    background-color: #ce7609;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -78,3 +78,56 @@ table {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Zoom slider styling */
+.zoom-slider {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.zoom-slider label {
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: #333;
+}
+
+.zoom-slider input[type="range"] {
+    -webkit-appearance: none;
+    width: 300px;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+.zoom-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ce7609;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.zoom-slider input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ce7609;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.zoom-slider input[type="range"]:hover {
+    background: #ccc;
+}
+
+.zoom-slider input[type="range"]::-webkit-slider-thumb:hover {
+    background: #e07b00;
+}
+
+.zoom-slider input[type="range"]::-moz-range-thumb:hover {
+    background: #e07b00;
+}

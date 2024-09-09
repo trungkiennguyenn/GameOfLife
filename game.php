@@ -46,6 +46,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <button type="submit" name="reset">Reset Grid</button>
         <button type="button" id="startPauseButton" onclick="toggleStartPause()">Start</button>
     </form>
+
+    <!-- Zoom Slider -->
+    <div class="zoom-slider">
+        <label for="zoomRange">Zoom:</label>
+        <input type="range" id="zoomRange" min="1" max="3" step="0.1" value="1" oninput="zoomGrid(this.value)">
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
