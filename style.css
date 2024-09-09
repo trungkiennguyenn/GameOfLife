@@ -1,4 +1,3 @@
-/* style.css */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -46,7 +45,6 @@ input[type="checkbox"]:not(:checked) {
     transition: background-color 0.3s ease;
 }
 
-/* Button styling */
 button {
     background-color: #ce7609;
     color: white;

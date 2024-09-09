@@ -1,18 +1,13 @@
 <?php
-// Define grid size
 $rows = 20;
 $cols = 40;
 
-// Initialize the grid with dead cells
 $grid = array_fill(0, $rows, array_fill(0, $cols, 0));
 
-// Handle form submission to update or reset the grid
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['reset'])) {
-        // Reset grid to initial state
         $grid = array_fill(0, $rows, array_fill(0, $cols, 0));
     } else {
-        // Update grid with submitted data
         $grid = $_POST['grid'];
     }
 }
