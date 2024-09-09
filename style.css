@@ -37,7 +37,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked {
-    background-color: rgb(16, 165, 141);
+    background-color: #ce7609;
     transition: background-color 0.3s ease;
 }
 
@@ -48,7 +48,7 @@ input[type="checkbox"]:not(:checked) {
 
 /* Button styling */
 button {
-    background-color: #ff8c00;
+    background-color: #ce7609;
     color: white;
     border: none;
     padding: 10px 20px;
