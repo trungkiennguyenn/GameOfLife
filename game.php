@@ -39,6 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <button type="submit">Explanation</button>
         <button type="submit" name="reset">Reset Grid</button>
         <button type="button" id="startPauseButton" onclick="toggleStartPause()">Start</button>
+        <button type="button" onclick="generateRandomGrid()">Generate Random Grid</button>
+        <label for="speedRange">Speed:</label>
+        <input type="range" id="speedRange" min="100" max="2000" value="500" step="100" oninput="updateSpeed(this.value)">
+        <span id="speedDisplay">500</span> ms
     </form>
     <script src="script.js"></script>
 </body>

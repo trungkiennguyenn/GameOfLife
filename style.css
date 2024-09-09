@@ -76,3 +76,17 @@ table {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+input[type="range"] {
+    width: 300px;
+    margin: 10px;
+}
+
+label {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+#speedDisplay {
+    font-size: 1.2em;
+    color: #333;
+}
