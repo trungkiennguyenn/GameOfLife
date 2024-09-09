@@ -18,6 +18,7 @@ table {
     border-collapse: collapse;
     margin: 20px auto;
     background-color: #ffffff;
+    transition: transform 0.2s ease-in-out;  /* Smooth zoom transition */
 }
 
 td {
@@ -70,64 +71,4 @@ button:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-form {
-    margin-top: 20px;
-}
-
-table {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Zoom slider styling */
-.zoom-slider {
-    margin: 20px auto;
-    text-align: center;
-}
-
-.zoom-slider label {
-    font-size: 1.2em;
-    margin-right: 10px;
-    color: #333;
-}
-
-.zoom-slider input[type="range"] {
-    -webkit-appearance: none;
-    width: 300px;
-    height: 8px;
-    background: #ddd;
-    border-radius: 5px;
-    outline: none;
-    transition: background 0.3s ease;
-}
-
-.zoom-slider input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #ce7609;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.zoom-slider input[type="range"]::-moz-range-thumb {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #ce7609;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.zoom-slider input[type="range"]:hover {
-    background: #ccc;
-}
-
-.zoom-slider input[type="range"]::-webkit-slider-thumb:hover {
-    background: #e07b00;
-}
-
-.zoom-slider input[type="range"]::-moz-range-thumb:hover {
-    background: #e07b00;
-}
+    
