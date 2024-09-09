@@ -71,4 +71,19 @@ button:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+input[type="range"] {
+    width: 300px;
+    margin: 10px;
+}
+
+label {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+#speedDisplay {
+    font-size: 1.2em;
+    color: #333;
+}
+
     

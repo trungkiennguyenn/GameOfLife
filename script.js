@@ -94,3 +94,41 @@ function countLiveNeighbors(grid, x, y) {
     return liveNeighbors;
 }
 
+
+function generateRandomGrid() {
+    const table = document.querySelector('table');
+    const rows = table.rows.length;
+    const cols = table.rows[0].cells.length;
+
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+            const cell = table.rows[i].cells[j].querySelector('input[type="checkbox"]');
+            const randomValue = Math.random() > 0.5 ? 1 : 0;
+            cell.checked = randomValue === 1;
+        }
+    }
+}
+
+let speed = 500;
+
+function updateSpeed(newSpeed) {
+    speed = parseInt(newSpeed);
+    document.getElementById('speedDisplay').textContent = newSpeed;
+    if (isRunning) {
+        clearInterval(intervalId);
+        intervalId = setInterval(runGameOfLife, speed);
+    }
+}
+
+function toggleStartPause() {
+    var startPauseButton = document.getElementById("startPauseButton");
+    if (isRunning) {
+        clearInterval(intervalId);
+        startPauseButton.textContent = "Start";
+        isRunning = false;
+    } else {
+        intervalId = setInterval(runGameOfLife, speed);
+        startPauseButton.textContent = "Pause";
+        isRunning = true;
+    }
+}
