@@ -44,6 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </table>
         <button type="submit">Explanation</button>
         <button type="submit" name="reset">Reset Grid</button>
+        <button type="button" id="startPauseButton" onclick="toggleStartPause()">Start</button>
     </form>
+    <script src="script.js"></script>
 </body>
 </html>
