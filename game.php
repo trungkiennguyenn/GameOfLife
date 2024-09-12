@@ -12,7 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-
 ?>
 
 <!DOCTYPE html>
@@ -46,8 +45,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="range" id="speedRange" min="100" max="2000" value="500" step="100" oninput="updateSpeed(this.value)">
         <span id="speedDisplay">500</span> ms
     </form>
-
-
     
     <script src="script.js"></script>
 </body>

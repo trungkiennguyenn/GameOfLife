@@ -132,3 +132,30 @@ function toggleStartPause() {
         isRunning = true;
     }
 }
+
+let isMouseDown = false;
+let toggleState = null; // To track whether we are selecting or deselecting cells
+
+document.addEventListener('mouseup', function () {
+    isMouseDown = false;
+});
+
+function initializeCell(cell, i, j) {
+    cell.addEventListener('mousedown', function () {
+        isMouseDown = true;
+        toggleState = !cell.checked; // Set toggleState based on the initial cell state
+        cell.checked = toggleState; // Toggle the state
+    });
+
+    cell.addEventListener('mousemove', function () {
+        if (isMouseDown) {
+            cell.checked = toggleState; // Keep toggling as mouse moves over the cell
+        }
+    });
+}
+
+document.querySelectorAll('input[type="checkbox"]').forEach((cell, index) => {
+    const i = Math.floor(index / 40); // Assuming 40 columns
+    const j = index % 40;
+    initializeCell(cell, i, j);
+});
