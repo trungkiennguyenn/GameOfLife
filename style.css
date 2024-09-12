@@ -18,7 +18,7 @@ table {
     border-collapse: collapse;
     margin: 20px auto;
     background-color: #ffffff;
-    transition: transform 0.2s ease-in-out;  /* Smooth zoom transition */
+    transition: transform 0.2s ease-in-out;
 }
 
 td {
@@ -47,7 +47,7 @@ input[type="checkbox"]:not(:checked) {
     transition: background-color 0.3s ease;
 }
 
-/* Button styling */
+
 button {
     background-color: #ce7609;
     color: white;
@@ -85,5 +85,3 @@ label {
     font-size: 1.2em;
     color: #333;
 }
-
-    
