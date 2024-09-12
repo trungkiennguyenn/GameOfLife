@@ -8,8 +8,8 @@ let offsetX = 0,
 let isDragging = false;
 let startX, startY;
 let grid = [];
-let rows = 2000,
-    cols = 2000; // Grid dimensions
+let rows = 1000,
+    cols = 1000; // Grid dimensions
 let isRunning = false;
 let intervalId = null;
 
