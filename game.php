@@ -54,6 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </table>
         
         <button type="submit">Explanation</button>
+        <button type="submit" name="next">Next</button>
         <button type="submit" name="reset">Reset Grid</button>
         <button type="button" id="startPauseButton" onclick="toggleStartPause()">Start</button>
         <button type="button" onclick="generateRandomGrid()">Generate Random Grid</button>
@@ -78,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit" name="load_layout">Laad Layout</button>
         </div>
     </form>
-     
+    
     <script src="script.js"></script>
 </body>
 </html>
