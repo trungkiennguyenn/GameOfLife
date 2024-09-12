@@ -8,27 +8,33 @@ if (!isset($_SESSION['layouts'])) {
     $_SESSION['layouts'] = [];
 }
 
-$grid = array_fill(0, $rows, array_fill(0, $cols, 0));
+function initializeGrid($rows, $cols) {
+    return array_fill(0, $rows, array_fill(0, $cols, 0));
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['reset'])) {
-        $grid = array_fill(0, $rows, array_fill(0, $cols, 0));
+        $grid = initializeGrid($rows, $cols);
+    
     } elseif (isset($_POST['save_layout']) && !empty($_POST['layout_name'])) {
-        if (isset($_POST['grid'])) {
-            $grid = $_POST['grid'];
-        }
-        $layout_name = $_POST['layout_name'];
-        $_SESSION['layouts'][$layout_name] = $grid;
+        $grid = $_POST['grid'] ?? initializeGrid($rows, $cols);
+        $_SESSION['layouts'][$_POST['layout_name']] = $grid;
+    
     } elseif (isset($_POST['load_layout']) && !empty($_POST['saved_layout'])) {
         $layout_name = $_POST['saved_layout'];
-        if (isset($_SESSION['layouts'][$layout_name])) {
-            $grid = $_SESSION['layouts'][$layout_name];
-        }
+        $grid = $_SESSION['layouts'][$layout_name] ?? initializeGrid($rows, $cols);
+    
     } elseif (isset($_POST['grid'])) {
         $grid = $_POST['grid'];
+    
+    } else {
+        $grid = initializeGrid($rows, $cols);
     }
+} else {
+    $grid = initializeGrid($rows, $cols);
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
